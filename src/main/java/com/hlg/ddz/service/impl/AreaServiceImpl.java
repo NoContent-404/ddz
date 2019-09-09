@@ -36,6 +36,7 @@ public class AreaServiceImpl implements AreaService {
                 if (effectedNum > 0){
                     return true;
                 } else {
+
                     throw new RuntimeException("插入区域信息失败！");
                 }
             }catch (Exception e){
