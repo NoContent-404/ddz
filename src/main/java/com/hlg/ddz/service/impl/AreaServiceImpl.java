@@ -16,12 +16,12 @@ public class AreaServiceImpl implements AreaService {
     private AreaDao areaDao;
 
     @Override
-    public List<Area> queryArea() {
+    public List<Area> getAreaList() {
         return areaDao.queryArea();
     }
 
     @Override
-    public Area queryAreaById(int areaId) {
+    public Area getAreaById(int areaId) {
         return areaDao.queryAreaById(areaId);
     }
 
@@ -36,7 +36,6 @@ public class AreaServiceImpl implements AreaService {
                 if (effectedNum > 0){
                     return true;
                 } else {
-
                     throw new RuntimeException("插入区域信息失败！");
                 }
             }catch (Exception e){
